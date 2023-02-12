@@ -133,14 +133,14 @@ const cvFormatter = (arr) => {
 
 const applicationsStatics = (arr) => {
     // write your code here
-    for(let i =0; i<arr.length;i++)
-    {
-        let app = arr[i];
-        if(app.yearsOfExperience<=1)
-        {
-            result.reje
-        }
-    }
+    //for(let i =0; i<arr.length;i++)
+    //{
+      //  let app = arr[i];
+      //  if(app.yearsOfExperience<=1)
+       // {
+        //  return reje
+      //  }
+   // }
 };
 // -------------------------------------------------------------------------------------------------------
 

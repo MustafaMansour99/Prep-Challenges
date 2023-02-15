@@ -56,6 +56,13 @@ const customerAndAge = (obj) => {
 
 const getEntries = (obj) => {
   // write your code here
+  return Object.entries(obj).map(([key, value]) => {
+    if (key === "ingredients") {
+      value = value.join(",");
+    }
+    return `${key}: ${value}`;
+  })
+
 };
 // -------------------------------------------------------------------------------------------------------
 
@@ -98,7 +105,16 @@ const getInfo = (arr) => {
   let coursesName = [];
   let studentsName = [];
   // write your code here
-
+  for (let i = 0; i < courses.length; i++) {
+    let course = courses[i];
+    coursesName.push(course.course);
+    for (let j = 0; j < course.Students.length; j++) {
+      let student = course.Students[j];
+      if (!studentsName.includes(student)) {
+        studentsName.push(student);
+      }
+    }
+  }
   return { coursesName, studentsName };
 };
 // -------------------------------------------------------------------------------------------------------

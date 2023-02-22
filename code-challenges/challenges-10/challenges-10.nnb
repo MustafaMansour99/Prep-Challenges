@@ -24,7 +24,7 @@
         {
             "language": "javascript",
             "source": [
-                "// to determine the height of the tallest candles\nconst maxCandleHeight = Math.max(candles);\n\n// Count how many candles have the tallest height.\nlet count = 0;\nfor (let i = 0; i < candles.length; i++) {\n    if (candles[i] === maxCandleHeight) {\n        count++;\n    }\n\n}\n// Return the count of tallest candles.\nreturn count;\n"
+                "// to determine the height of the tallest candles\nconst maxCandleHeight = Math.max(candles);\n\n// Count how many candles have the tallest height.\nlet count = 0;\nfor (let i = 0; i < candles.length; i++) {\n    if (candles[i] === maxCandleHeight){\n        count++;\n    }\n\n}\n// Return the count of tallest candles.\nreturn count;\n"
             ],
             "outputs": [
                 {

@@ -18,10 +18,10 @@
 
 function square(arr) {
     // write your code here
-let squares = arr.map((item)=>{
-    return item*item
-})
-return squares;
+    let squares = arr.map((item) => {
+        return item * item
+    })
+    return squares;
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -61,9 +61,9 @@ return squares;
 
 function fullName(arr) {
     // write your code here
-    const fullNames = arr.map(arr =>`${arr.firstName} ${arr.lastName}`);
+    const fullNames = arr.map(arr => `${arr.firstName} ${arr.lastName}`);
     return fullNames;
-    
+
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -130,11 +130,21 @@ function fullName(arr) {
 
 function gradesAvg(arr) {
     // write your code here
-    const studentsWithAvg = arr.map(arr => {
-        const avg = arr.grades.reduce((sum, grade) => sum + grade, 0) / arr.grades.length;
-        return { ...arr, avg };
-      });
-      
+    // const numbers = arr.map(Number);
+    // const sum = numbers.reduce((acc, number) => acc + number, 0);
+    // const average = sum / numbers.length;
+    // return average; 
+    const studentsWithAvg = arr.map(student => {
+        const sum = student.gradsList.reduce((acc, grade) => acc + grade, 0);
+        const avg = sum / student.gradsList.length;
+        return {
+            ...student,
+            avg: avg
+        };
+    });
+
+    return studentsWithAvg;
+
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -209,6 +219,15 @@ function gradesAvg(arr) {
 
 function studentsResult(arr) {
     // write your code here
+    const studentsWithResult = arr.map(student => ({
+        ...student, //using the spread operator (...) to copy the properties of the original object into the new object, along with the avg property.
+
+
+        result: student.avg >= 50 ? "Passed" : "Failed"
+    }));
+
+    return studentsWithResult;
+
 }
 // -------------------------------------------------------------------------------------------------------
 

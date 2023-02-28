@@ -115,7 +115,7 @@ const stringReverse = (str) => {
 // };
 //
 
-const statistics = (arr) => {
+const  statistics = (arr) => {
     // write your code here
     const result = arr.reduce((acc, cur) => {
         if (!acc[cur.votes_To]) {
@@ -127,6 +127,9 @@ const statistics = (arr) => {
         return acc;
     }, {})
     return result;
+
+
+
 }
 // -------------------------------------------------------------------------------------------------------
 

@@ -42,7 +42,11 @@ const objectCounter = (obj) => {
     // write your code here
     // return obj.reduce((accumulator,cur) => accumulator + 1  , 0);
     const count = obj.reduce((accumulator, currentValue) => {
+
+
         return accumulator + 1;
+
+        
     }, 0);
     return count;
 

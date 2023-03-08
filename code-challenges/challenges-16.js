@@ -33,9 +33,9 @@ const reverseString = (string) => {
 
 const detectFace = (arr) => {
     //write your code here ...
-   let newArr= arr.filter((item)=>{
-        if(item.includes('^_^'))
-        return item
+    let newArr = arr.filter((item) => {
+        if (item.includes('^_^'))
+            return item
     })
     return newArr;
 }
@@ -53,6 +53,7 @@ const detectFace = (arr) => {
 
 const eveCharacter = (str) => {
     //write your code here ...
+    return str.split('').filter((char, i) => i % 2 === 0).join('');
 }
 // -------------------------------------------------------------------------------------------------------
 
